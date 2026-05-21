@@ -1,0 +1,67 @@
+{
+  "name": "table-of-indexing-chinese-character-components",
+  "version": "0.0.1",
+  "description": "Machine-readable JSON of GF 0011-2009《汉字部首表》 (Table of Indexing Chinese Character Components): 201 main radicals, 83 variant forms, and 69 cross-reference groupings.",
+  "keywords": [
+    "chinese",
+    "radicals",
+    "bushou",
+    "部首",
+    "hanzi",
+    "汉字",
+    "gf-0011-2009",
+    "cjk"
+  ],
+  "homepage": "https://github.com/leonsilicon/table-of-indexing-chinese-character-components#readme",
+  "bugs": {
+    "url": "https://github.com/leonsilicon/table-of-indexing-chinese-character-components/issues"
+  },
+  "license": "MIT",
+  "author": "Leon Silicon <leon@leonsilicon.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonsilicon/table-of-indexing-chinese-character-components.git"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "radicals.json",
+    "data/GF 0011-2009《汉字部首表》.txt"
+  ],
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./radicals.json": "./radicals.json",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vp test",
+    "check": "vp check",
+    "parse": "bun run scripts/parse.ts",
+    "prepublishOnly": "bun run scripts/parse.ts",
+    "prepare": "vp config"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.2",
+    "@typescript/native-preview": "7.0.0-dev.20260509.2",
+    "bumpp": "^11.1.0",
+    "typescript": "^6.0.3",
+    "vite-plus": "^0.1.20"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@latest",
+    "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "bun@1.3.14"
+}
