@@ -1,6 +1,6 @@
 {
   "name": "table-of-indexing-chinese-character-components",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Machine-readable JSON of GF 0011-2009《汉字部首表》 (Table of Indexing Chinese Character Components): 201 main radicals, 83 variant forms, and 69 cross-reference groupings.",
   "keywords": [
     "chinese",
